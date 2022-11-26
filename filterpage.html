@@ -2,78 +2,277 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="static/css/main.css">
-	<link rel="stylesheet" href="static/css/filterpage.css">
-	<title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="static/css/filterpage.css">
+    <title>Document</title>
 </head>
+
 <body>
-	<div class="overlay"></div>
-	<div class="modal">
-		<!-- img, next, right, close -->
-		<img src="" />
-		<button class="prev">
-			<</button>
-				<button class="next">></button>
-				<button class="close">x</button>
-	</div>
-	<section>
-		<h3>what filter do you like</h3>
-		<nav>
-			<ul>
-				<li><a href="main.html" class="active">post</a></li>
-				<li style="padding-left: 25px;">filter</a></li>
-			</ul>
-		</nav>
-		<p class="desc">
-			hello. Welcome to the filter studio.<br /> Choose any filter you like. We will change your
-			picture. If you
-			don't see the filter you want, add a new one.</p>
-		<div class="filter-container">
-            
+    <div class="overlay"></div>
+    <div class="modal">
+        <!-- img, next, right, close -->
+        <img src="" />
+        <button class="prev">
+            << /button>
+                <button class="next">></button>
+                <button class="close">x</button>
+    </div>
+    <section>
+        <h3>what filter do you like</h3>
+        <nav>
+            <ul>
+                <li><a href="main.html">post</a></li>
+                <li style="padding-left: 25px;"><a class="active">filter</a></li>
+            </ul>
+        </nav>
+        <p class="desc">
+            hello. Welcome to the filter studio.<br /> Choose any filter you like. We will change your
+            picture. If you
+            don't see the filter you want, add a new one.</p>
+            <div class="gallery-container">
 
-
-
-
-
-
-            <!-- 스크롤 필터 -->
-            <div id="contenar">
-                <div id="cards">
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                </div>
-                <div id="slider">
-                    <input type="range" id="slid"
-                           min="0" max="50"
-                           value="0" oninput="slid()"/>
-                    <div id="cerlc"></div>
-                </div>
-            </div>
-			
+                <!-- 슬라이드 -->
+                <div id="container">
+                    <div class="slide_wrap">
+                        <div class="slide_box">
+                            <div class="slide_list clearfix">
+                                <div class="slide_content slide01">
+                                    <table class="table" >
+                                        <tr>
+                                            <!-- 첫번째 줄 시작 -->
+                                            <td>
+                                                <div class="gallery-item"><img
+                                                        src="https://velog.velcdn.com/images/taeeuno_o/post/15168e24-baa4-4e2a-bb82-20d80990d91e/image.jpg"
+                                                        alt="rice noodle eggroll" /></div>
+                                            </td>
+                                            <td>
+                                                <div class="gallery-item"><img
+                                                        src="https://velog.velcdn.com/images/taeeuno_o/post/15168e24-baa4-4e2a-bb82-20d80990d91e/image.jpg"
+                                                        alt="rice noodle eggroll" /></div>
+                                            </td><td>
+                                                <div class="gallery-item"><img
+                                                        src="https://velog.velcdn.com/images/taeeuno_o/post/15168e24-baa4-4e2a-bb82-20d80990d91e/image.jpg"
+                                                        alt="rice noodle eggroll" /></div>
+                                            </td>
+                                        </tr><!-- 첫번째 줄 끝 -->
+                                        <tr>
+                                            <!-- 두번째 줄 시작 -->
+                                            <td>
+                                                <div class="gallery-item"><img
+                                                        src="https://velog.velcdn.com/images/taeeuno_o/post/15168e24-baa4-4e2a-bb82-20d80990d91e/image.jpg"
+                                                        alt="rice noodle eggroll" /></div>
+                                            </td><td>
+                                                <div class="gallery-item"><img
+                                                        src="https://velog.velcdn.com/images/taeeuno_o/post/15168e24-baa4-4e2a-bb82-20d80990d91e/image.jpg"
+                                                        alt="rice noodle eggroll" /></div>
+                                            </td><td>
+                                                <div class="gallery-item"><img
+                                                        src="https://velog.velcdn.com/images/taeeuno_o/post/15168e24-baa4-4e2a-bb82-20d80990d91e/image.jpg"
+                                                        alt="rice noodle eggroll" /></div>
+                                            </td><!-- 두번째 줄 끝 -->
+                                    </table>
+    
+    
+    
+                                </div>
+    
+                                <div class="slide_content slide02">
+                                    <table class="table" >
+                                        <tr>
+                                            <!-- 첫번째 줄 시작 -->
+                                            <td>
+                                                <div class="gallery-item"><img
+                                                        src="https://velog.velcdn.com/images/taeeuno_o/post/15168e24-baa4-4e2a-bb82-20d80990d91e/image.jpg"
+                                                        alt="rice noodle eggroll" /></div>
+                                            </td><td>
+                                                <div class="gallery-item"><img
+                                                        src="https://velog.velcdn.com/images/taeeuno_o/post/15168e24-baa4-4e2a-bb82-20d80990d91e/image.jpg"
+                                                        alt="rice noodle eggroll" /></div>
+                                            </td><td>
+                                                <div class="gallery-item"><img
+                                                        src="https://velog.velcdn.com/images/taeeuno_o/post/15168e24-baa4-4e2a-bb82-20d80990d91e/image.jpg"
+                                                        alt="rice noodle eggroll" /></div>
+                                            </td>
+                                        </tr><!-- 첫번째 줄 끝 -->
+                                        <tr>
+                                            <!-- 두번째 줄 시작 -->
+                                            <td>
+                                                <div class="gallery-item"><img
+                                                        src="https://velog.velcdn.com/images/taeeuno_o/post/15168e24-baa4-4e2a-bb82-20d80990d91e/image.jpg"
+                                                        alt="rice noodle eggroll" /></div>
+                                            </td><td>
+                                                <div class="gallery-item"><img
+                                                        src="https://velog.velcdn.com/images/taeeuno_o/post/15168e24-baa4-4e2a-bb82-20d80990d91e/image.jpg"
+                                                        alt="rice noodle eggroll" /></div>
+                                            </td><td>
+                                                <div class="gallery-item"><img
+                                                        src="https://velog.velcdn.com/images/taeeuno_o/post/15168e24-baa4-4e2a-bb82-20d80990d91e/image.jpg"
+                                                        alt="rice noodle eggroll" /></div>
+                                            </td>
+                                        </tr><!-- 두번째 줄 끝 -->
+                                    </table>
+                                </div>
+                                <div class="slide_content slide03">
+                                    <table class="table" >
+                                        <tr>
+                                            <!-- 첫번째 줄 시작 -->
+                                            <td>
+                                                <div class="gallery-item"><img
+                                                        src="https://velog.velcdn.com/images/taeeuno_o/post/15168e24-baa4-4e2a-bb82-20d80990d91e/image.jpg"
+                                                        alt="rice noodle eggroll" /></div>
+                                            </td><td>
+                                                <div class="gallery-item"><img
+                                                        src="https://velog.velcdn.com/images/taeeuno_o/post/15168e24-baa4-4e2a-bb82-20d80990d91e/image.jpg"
+                                                        alt="rice noodle eggroll" /></div>
+                                            </td><td>
+                                                <div class="gallery-item"><img
+                                                        src="https://velog.velcdn.com/images/taeeuno_o/post/15168e24-baa4-4e2a-bb82-20d80990d91e/image.jpg"
+                                                        alt="rice noodle eggroll" /></div>
+                                            </td>
+                                        </tr><!-- 첫번째 줄 끝 -->
+                                        <tr>
+                                            <!-- 두번째 줄 시작 -->
+                                            <td>
+                                                <div class="gallery-item"><img
+                                                        src="https://velog.velcdn.com/images/taeeuno_o/post/15168e24-baa4-4e2a-bb82-20d80990d91e/image.jpg"
+                                                        alt="rice noodle eggroll" /></div>
+                                            </td><td>
+                                                <div class="gallery-item"><img
+                                                        src="https://velog.velcdn.com/images/taeeuno_o/post/15168e24-baa4-4e2a-bb82-20d80990d91e/image.jpg"
+                                                        alt="rice noodle eggroll" /></div>
+                                            </td><td>
+                                                <div class="gallery-item"><img
+                                                        src="https://velog.velcdn.com/images/taeeuno_o/post/15168e24-baa4-4e2a-bb82-20d80990d91e/image.jpg"
+                                                        alt="rice noodle eggroll" /></div>
+                                            </td>										</td>
+                                        </tr><!-- 두번째 줄 끝 -->
+                                    </table>
+                                </div>
+    
+                            </div>
+                            <!-- // 슬라이드 끝-->
+                        </div>
+    
+    
+                        <!-- // 슬라이드 버튼 시작-->
+                        <div class="slide_btn_box">
+                            <button type="button" class="slide_btn_prev"><</button>
+                            <button type="button" class="slide_btn_next">></button>
+                        </div>
+                        <!-- //슬라이드 버튼 박스 -->
+                        <ul class="slide_pagination"></ul>
+                        <!-- //슬라이드 페이지네이션 -->
+    
+    
+                    </div>
+    
+                    <!-- 슬라이드 컨테이너 끝 -->
+    
+    
+                    <!-- 모달창 만들기 -->
+                    <div class="upload-filter-btn-container">
+                     
+                        <div class="upload-btn-container-box"style="border: 1px solid red;">						<!-- 파일 업로드  Modal을 여는 클래스 -->
+                            <button class="modal-btn">필터 업로드</button>
+                        </div>
+                        <div class="upload-btn-container-box"style="border: 1px solid red;">						<button class="modal-btn">게시물 상세보기</button>
+                        </div>
+ 
+	<!-- 필터 업로드 Modal -->
+	<div class="btn-modal">
+		<!-- 두 번째 Modal의 내용 -->
+		<div class="modal-content">
+			<a class="upload-text">Filter Upload</a>
+			<a class="modal-close">x</a>
+			<div class="filter-modal-box">
+				<!-- 예쁜 버튼 -->
+				<div class="filter-upload">
+					<div class="filter-form-input">
+						<label for="file-ip-2">Upload filter</label>
+						<input type="file" id="file-ip-2" accept="filter/*" onchange="showPreviewFilter(event);">
+						<div class="filter-preview">
+							<img id="file-ip-2-preview">
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 아래 박스 -->
+			<div class="filter-modal-box-down">
+				<!-- 필터 제목 적는곳 -->
+				<input type="text" id="filter-title" placeholder="title" class="post_filter_title">
+				<div class="img_modal_button">
+					<button type="button" onclick="post()" class="m2_start"
+						style="background-color: #636363;">필터추가하기</button>
+				</div>
+			</div>
 		</div>
+	</div>
 
-	</section>
+	<!-- 필터 상세보기 Modal -->
+	<div class="btn-modal">
+		<!-- 게시물 상세보기 Modal의 내용 -->
+		<div class="detail-modal-content">
 
-	<footer>
-		<span>Team LoL</span> / <span> <a href="https://github.com/Carrotww/Recommend_service" target="_blank">Github
-		</span>
-	</footer>
+			<div class="detail-big-box">
+				<!-- 이미지 -->
+				<div class="detail-box1">
+					<div class="product-title">
+						<div class="product-img-div">
+							<img class="product-img"
+								src="https://velog.velcdn.com/images/taeeuno_o/post/cf1cae62-9f25-4e32-9c2e-f892e1d75ed6/image.jpg">
+						</div>
+					</div>
+				</div>
+				<!-- 글 -->
+				<div class="detail-box2">
+					<a class="modal-close">x</a>
+					<div class="detail-title-box">
+						<span class="user">dsfasdffs</span>
+					</div>
+					<hr>
+
+					<!-- 상세페이지 내용 작성 div -->
+					<div class="detail-content-box" style="overflow:auto;">
+						<a> 상세페이지 게시물 내용 작성하는 div 입니다. 스크롤 기능 있음</a>
+
+					</div>
+					<hr>
+					<!-- 작성한 댓글들이 달리는 div -->
+					<div class="detail-comment-box" style="overflow:auto;">
+						<a> 댓글 작성하는 div 입니다. 스크롤 기능 있음</a>
+					</div>
+
+					<hr>
+					<!-- 댓글 작성하는 div -->
+					<div class="write-comment">
+						<input type="text" id="comment-title" placeholder="댓글 작성하기" class="post_detail_comment">
+						<div class="comment_modal_button">
+							<button type="button" onclick="post()" class="m3_start" style="background-color: #636363;">
+								작성하기</button>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+                </div>
+        </section>
+    </section>
+
 
 
 </body>
 
 <script src="static/js/main.js"></script>
 <script src="static/js/filterpage.js"></script>
+<script src="static/js/main_slide.js"></script>
+
 
 
 

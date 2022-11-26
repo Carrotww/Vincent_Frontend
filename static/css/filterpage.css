@@ -1,6 +1,9 @@
+
+
+
 /* 필터 슬라이드의 전체 컨테이너 */
 .filter-container {
-    border: 1px solid orange;
+    border: 2px solid orange;
     /* padding-top: 25px; */
     display: flex;
     flex-wrap: wrap;
@@ -15,11 +18,11 @@
 /* 필터만  */
 #contenar{
     /* margin: 10px; */
-    border: 3px solid palevioletred;
+    border: 3px solid rgb(0, 54, 249);
     width: 600px;
     height: max-content;
     position: relative;
-    top: 50%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%,-50%);
     overflow: hidden;
@@ -27,7 +30,7 @@
     
 }
 /* 필터 목록만 있는 컨테이너 */
-#cards{
+#filters{
     border: 3px solid rgb(111, 36, 61);
 
     width: max-content;
@@ -39,8 +42,9 @@
 
 
 /* 각각의 필터 카드 */
-.card{
-    width: 200px;
+.filter{
+    border: 3px solid rgb(236, 130, 165);
+    width: 100px;
     height: 90px;
     border-radius: 5px;
     background: #00adb5;
@@ -49,9 +53,14 @@
     overflow: hidden;
 }
 
-.card:first-of-type{
-    margin-left: 0px;
-}
+
+/* 필터 카드 안 이미지 */
+
+.filter .filter-example {
+width:100%;
+height:100%;
+object-fit:cover;
+  }
 
 
 /* 필터카드 목록 하단 슬라이더 */
@@ -85,3 +94,406 @@ input#slid {
     top: -4px;
     position: absolute;
 }
+
+
+/* 슬라이드 */
+.table {
+    width: 100%;
+  }
+  .table td{
+    width: 33.3%;
+    height: 50%;
+  padding: 20px 10px;
+  }
+  
+  #container {
+    /* border: 2px solid red; */
+    width: 1000px;
+    height: 20%;
+    margin: 10px;
+  }
+  
+  .slide_wrap {
+    border: 2px solid rgb(136, 0, 0);
+    position: relative;
+    width: 600px;
+    margin: auto;
+    /* padding-bottom: 30px; */
+  }
+  
+  .slide_box {
+    width: 100%;
+    margin: auto;
+    overflow-x: hidden;
+  }
+  
+  .slide_content {
+    display: table;
+    float: left;
+    width: 600px;
+  
+  }
+  
+  
+  
+  
+  .slide_content>p {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 100px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .slide_content.slide01 {
+    background: #ff9b90;
+  
+  }
+  
+  .slide_content.slide02 {
+    background: #ff925c;
+  }
+  
+  .slide_content.slide03 {
+    background: #fff4b0;
+  }
+
+  
+  .slide_btn_box>button {
+    position: absolute;
+    top: 50%;
+    margin-top: -45px;
+    width: 60px;
+    height: 60px;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    background: none;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    border-radius: 100%;
+  }
+  
+  .slide_btn_box>.slide_btn_prev {
+    left: -100px;
+  }
+  
+  .slide_btn_box>.slide_btn_next {
+    right: -100px;
+  }
+  
+  .slide_pagination {
+    /* position: absolute; */
+    left: 50%;
+    bottom: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    /* transform: translateX(-50%); */
+  }
+  
+  .slide_pagination .dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    overflow: hidden;
+    background: #ddd;
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+  
+  .slide_pagination .dot.dot_active {
+    background: #333;
+  }
+  
+  .slide_pagination .dot a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .upload-filer-btn-container-box{
+    margin: 0px auto;
+      float: left;
+      width: 40%;
+    }
+  
+  
+  .upload-filter-btn-container {
+    margin: 10px auto;
+    /* border: 3px red solid; */
+    padding: 5px 0px;
+    /*   background-color: #eee; */
+    letter-spacing: 0.1em;
+    font-size: 1.5vw;
+      /* border: 1px solid yellow; */
+    width: 80%;
+    height: 30%;
+    display: block;
+
+    background-color: white;
+    border-radius: 10px;
+    opacity: 0.6;
+  }
+
+  
+  
+  /* 모달창 */
+  
+  .modal-content {
+    border: 4px solid blue;
+    background-color: #ffffff;
+    margin: 40px auto;
+    /* 15% from the top and centered */
+    padding: 20px 10px;
+    border: 1px solid #888;
+    width: 600px;
+    height: 600px;
+    top: 10px;
+    border-radius: 10px;
+    /* Could be more or less, depending on screen size */
+  }
+  
+  
+  /*모달창 닫는 버튼*/
+  .modal-close {
+    border: 3px orange solid;
+    color: #aaa;
+    float: right;
+    /* font-size: 28px; */
+    font-weight: bold;
+    margin: 5px 5px;
+  }
+  
+  .modal-close:hover,
+  .modal-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-content .image_container {
+    border: solid red 3px;
+    width: 80%;
+    height: 80%;
+  }
+  
+  
+  .upload-box {
+    /* border: 3px solid red; */
+    height: 80%
+  }
+  
+  .preview {
+    max-width: auto;
+    height: 100%;
+  }
+  
+  .preview-container {
+    width: 200px;
+    height: 200px;
+  }
+  
+  
+  
+  
+  /* 이쁜 이미지 업로드 모달창 ============*/
+  
+  .img-upload {
+    border-radius: 10px;
+  
+    margin: 20px auto;
+    border: 4px dashed #555;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* padding:  10px 10px; */
+  }
+  
+  .img-form-input {
+    width: 250px;
+    padding: 10px 50px;
+    background: #fff;
+    /* border: 4px dashed #555; */
+    margin: 20px;
+  }
+  
+  .img-form-input input {
+  
+    display: none;
+  }
+  
+  .img-form-input label {
+    display: block;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #333;
+    color: #fff;
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+    text-transform: Uppercase;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .img-form-input img {
+    width: 100%;
+    display: none;
+    margin-top: 10px;
+  }
+  
+  
+  .buttons-box {
+    border: 1px solid red;
+    margin: 70px 50px;
+    height: 80%;
+    width: 45%;
+  }
+  
+  
+  
+  .buttons-box {
+    margin: 20px auto;
+    border: 1px solid rgb(199, 25, 25);
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding:  10px 10px; */
+  }
+  
+  
+  /* 이쁜 필터 업로드 모달창 =================================================*/
+  
+  /* 필터 이미지가 들어가는 부분 container*/
+  .filter-modal-box {
+    margin: 30px auto;
+    border: 2px solid red;
+    width: 90%;
+    height: 50%;
+    display: flex;
+  }
+  
+  /* 필터 이미지 삽입 부분  테두리*/
+  .filter-upload {
+    border-radius: 10px;
+    margin: 20px auto;
+    border: 4px dashed #555;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* padding:  10px 10px; */
+  }
+  
+  .filter-form-input {
+    width: 250px;
+    padding: 10px 30px;
+    background: #fff;
+    /* border: 4px dashed #555; */
+    margin: 20px;
+  }
+  
+  .filter-form-input input {
+    display: none;
+  }
+  
+  .filter-form-input label {
+    display: block;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #333;
+    color: #fff;
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+    text-transform: Uppercase;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+  
+  }
+  
+  
+  
+  
+  .filter-form-input img {
+    width: 100%;
+    display: none;
+    margin-top: 10px;
+  }
+  
+  /* 필터 제목과 ok 버튼이 들어가는 부분 container */
+  .filter-modal-box-down {
+    margin: 40px auto;
+    border: 2px solid red;
+    width: 90%;
+    height: 20%;
+    padding: 10px 10px;
+    /* display: flex; */
+  }
+  
+  /* 업로드 필터 제목 정하는 css */
+  .m2_start {
+    padding: 4px 13px;
+    background-color: #e74b24;
+    border-radius: 7px;
+    font-size: 16px;
+    border: 0px solid #e74b24;
+    cursor: pointer;
+  }
+  
+  .post_filter_title {
+    width: 98.5%;
+    height: 35px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 10px;
+    outline: none;
+    padding-left: 10px;
+    background-color: rgb(233, 233, 233);
+    margin: 20px auto;
+  }
+  
+  
+  /* ok 버튼 */
+  .filter-form-ok {
+    border: 3px solid orchid;
+    width: 100px;
+    padding: 10px;
+    background: #fff;
+    height: 20px;
+  }
+  
+  
+  .filter-form-ok input {
+    display: none;
+  }
+  
+  .filter-form-ok label {
+    display: block;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: #333;
+    color: #fff;
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+    text-transform: Uppercase;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  
+
+
+
