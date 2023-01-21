@@ -1,9 +1,5 @@
-console.log("연결완")
 post_list()
-// window.onload = ()=>{
-//   console.log("연ㅇㅇㅇㅇㅇㅇ");
-//   post_list()
-// }
+
 
 // // 슬라이드 내 이미지 관련=======================================================
 const galleryItem = document.querySelectorAll(".gallery-item");
@@ -22,7 +18,7 @@ galleryItem.forEach((item, i) => {
   idx_src_arr[i] = item.children[0].src;
   item.addEventListener("click", function(){
     current_idx = i;
-    // console.log(item.children[0].src);
+
     overlay.classList.add("show");
     modal.classList.add("show");
     modal.children[0].src=item.children[0].src;
@@ -41,7 +37,7 @@ let show_modal = (src_str) => {
 
 //next
 next.addEventListener('click', function(){
-  // console.log("next");
+
   //showSlide(slideIdx++);
   if(current_idx == galleryItem.length - 1){
     current_idx = 0;
@@ -65,7 +61,7 @@ prev.addEventListener('click', function(){
 
 let slideIdx = 0;
 let showSlide = (idx) => {
-  console.log(idx)
+
   
   if (idx >= galleryItem.length){
     slideIdx = 0;
@@ -73,17 +69,17 @@ let showSlide = (idx) => {
   if(idx < 0){
     slideIdx = galleryItem.length-1;}
   
-  // console.log(galleryItem[slideIdx].children[0].src);
+
   modal.children[0].src=galleryItem[slideIdx].children[0].src;
 }
 next
 next.addEventListener('click', function(){
-  // console.log("next");
+
   showSlide(slideIdx++);
 })
 //back
 prev.addEventListener('click', function(){
-  // console.log("prev");
+
   showSlide(slideIdx--);
 })
 
@@ -104,7 +100,7 @@ function Modal(num) {  // Modal을 띄우고 닫는 클릭 이벤트를 정의�
         // 해당 클래스의 내용을 클릭하면 Modal을 띄웁니다.
         btns[num].onclick = function () {
             modals[num].style.display = "block";
-            console.log(num);
+
         };
 
         // <span> 태그(X 버튼)를 클릭하면 Modal이 닫습니다.
@@ -190,30 +186,25 @@ function showPreviewFilter(event) {
 
 // 모든 게시글 목록 출력
 async function post_list() {
-  console.log("연33333333333s")
-  // 해당 url로 요청보내고 응답데이터 받기 : fetch
+
   const response = await fetch('http://127.0.0.1:8000/main/', {
       method:'GET'
   }).then(response => {return response.json()})
-  // Promise 안에 담긴 데이터 꺼내오기
-  console.log(response)
-  console.log("previous는",response['previous'])
-  console.log("next는",response['next'])
-  console.log("results는",response['results'])
-  console.log("count는",response['count'])
+
+ 
 
   var posts = document.getElementById("table"); // 부모 div
-  console.log("posts는",posts)
+  
 
   for (i = 0; i < response['results'].length; i++) {
 
     const image = response['results'][i]['post_image'];
-    console.log(image)
+
 
     const new_image = `<div class='table_item'>
           <img src='${image}'>
           </div>`;
-    console.log(new_image)
+
     posts.insertAdjacentHTML("beforeend",new_image)
    
   }
