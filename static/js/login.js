@@ -1,9 +1,7 @@
 
 //signIn//
 // 입력 없으면 표시 현재 구현 안됨
-window.onload = () => {
-    console.log("load")
-}
+
 
 window.addEventListener('load', () => {
     const forms = document.getElementsByClassName('validation-form');
@@ -22,7 +20,7 @@ window.addEventListener('load', () => {
 
 
 async function handleSignIn() {
-    console.log("로그인함수 시작")
+   
     const username = document.getElementById("username").value
     const password = document.getElementById("password").value
         // const response = await fetch('http://127.0.0.1:8000/users/api/token/', {
@@ -39,7 +37,7 @@ async function handleSignIn() {
 
     const response_json = await response.json();
 
-    console.log(response_json);
+  
 
     localStorage.setItem("access", response_json.access); //로컬스토리지에 access 토큰 저장
     localStorage.setItem("refresh", response_json.refresh);
@@ -95,7 +93,7 @@ async function handleSocial() {
 //signUp//
 // 입력 없으면 표시 
 window.onload = () => {
-    console.log("load")
+   
 }
 
 async function check_value() {
@@ -110,24 +108,13 @@ async function check_value() {
         }, false);
     });
 }
-// window.addEventListener('load', () => {
-//     const forms = document.getElementsByClassName('validation-form');
-//     Array.prototype.filter.call(forms, (form) => {
-//         form.addEventListener('submit', function(event) {
-//             if (form.checkValidity() === false) {
-//                 event.preventDefault();
-//                 event.stopPropagation();
-//             }
-//             form.classList.add('was-validated');
-//         }, false);
-//     });
-// }, false);
+
 
 async function handleSignUp() {
     const username = document.getElementById("username2").value
     const password = document.getElementById("password2").value
     const email = document.getElementById("email2").value
-        // const response = await fetch('http://127.0.0.1:8000/users/signup/', {
+    
     const response = await fetch('http://127.0.0.1:8000/users/signup/', {
         headers: {
             'content-type': 'application/json',

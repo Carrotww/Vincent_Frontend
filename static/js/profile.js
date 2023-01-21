@@ -1,15 +1,12 @@
 window.onload = () => {
-    console.log("게시글 생성 js 로딩완료");
     show_profile_fuc()
 }
 
 async function show_profile_fuc() {
-    console.log("현재 버튼을 클릭한 상태입니다."); // 버튼이 눌러지고 있는 지 확인 필수
+
     const id = localStorage.getItem("payload")
     const id_json = JSON.parse(id)
-  
-    console.log("실행중~~~")
-  
+    
     const response = await fetch('http://127.0.0.1:8000/users/'+ id_json['username'] +'/', {
 
             method: 'GET',
@@ -21,8 +18,7 @@ async function show_profile_fuc() {
         .then(data => {
 
             // 프로필 정보 불러오는 함수
-            console.log("실행중~~~")
-
+    
             //프로필 사진 들어갈 div 지정
             const profile_image_frame = document.getElementById("pd-profile-image-frame");
             profile_image_frame.setAttribute('class', 'pd-profile-image-frame')
